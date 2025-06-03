@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:20:41 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 15:29:27 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/03 15:26:25 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(){
+	
 }
 
 const char *PresidentialPardonForm::NotSignException::what() const throw()

@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 09:50:59 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 15:29:41 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/03 14:05:55 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ class Bureaucrat{
         Bureaucrat& decrementGrade(void);
         void executeForm(AForm const & form) const;
         void signForm(AForm& Form);
-        
         class GradeTooHighException : public std::exception
 		{
 			public:
