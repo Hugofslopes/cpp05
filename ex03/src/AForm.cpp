@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 14:08:23 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 14:57:06 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/03 18:09:24 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ bool AForm::getIsSign() const{
 }
 
 void AForm::beSigned(const Bureaucrat &bureaucrat){
-    std::cout << bureaucrat.getGrade() << std::endl << std::endl;
     if (bureaucrat.getGrade() > _gradeToSign)
         throw GradeTooLowException();
     _is_signed = 1;

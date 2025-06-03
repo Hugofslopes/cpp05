@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:21:17 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 14:39:07 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:59:43 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class PresidentialPardonForm : public AForm {
 		~PresidentialPardonForm();
 
 		void execute(Bureaucrat const & executor) const;
+		static AForm *createPForm(std::string const &target);
 		
 	private:
 		std::string _target;

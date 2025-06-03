@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:58:48 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 15:21:04 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:54:45 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,8 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor)  const{
 	file << "  ||||   " << std::endl;
 	file << "  ||||   " << std::endl;
 	file.close();
+}
+
+AForm *ShrubberyCreationForm::creatSForm(std::string const &target){
+	return (new ShrubberyCreationForm(target));
 }

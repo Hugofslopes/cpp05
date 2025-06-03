@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:20:41 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 15:26:25 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:50:15 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,9 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor)  const{
 		
 	std::cout << _target << " has been pardoned by Zafod Beeblebrox." << std::endl;
 }
+
+AForm *PresidentialPardonForm::createPForm(std::string const &target)
+{
+	return (new PresidentialPardonForm(target));
+}
+

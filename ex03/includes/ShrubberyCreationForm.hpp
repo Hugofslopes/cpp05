@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:51:19 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 14:42:32 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:59:36 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ShrubberyCreationForm : public AForm {
 		~ShrubberyCreationForm();
 
 		void execute(Bureaucrat const & executor)  const;
+		static AForm *creatSForm(std::string const &target);
 		
 	private:
 		std::string _target;
