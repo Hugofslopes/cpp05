@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 11:57:11 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/02 13:17:09 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 09:13:21 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ int main()
             std::cout << c << std::endl;
         }
         catch (const Bureaucrat::GradeTooHighException& e) {
-            std::cerr << "Grade too high error: " << e.what() << std::endl;
+            std::cerr << e.what() << std::endl;
         }
         catch (const Bureaucrat::GradeTooLowException& e) {
-            std::cerr << "Grade too low error: " << e.what() << std::endl;
+            std::cerr << e.what() << std::endl;
         }
     }
-    std::cout << std::endl;
+    std::cout << std::endl << std::endl;
     {
         try {
             Bureaucrat a(1, "Mr Lopes");

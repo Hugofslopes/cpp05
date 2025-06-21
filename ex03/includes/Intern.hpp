@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 15:30:59 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 16:12:19 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 11:19:49 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ class Intern {
 		Intern();
 		Intern(const Intern &other);
 		Intern& operator=(const Intern &other);
+		~Intern();
 
 		AForm* makeForm(std::string formName, std::string formTarget);
+		
 		class makeFormException : public std::exception
 		{
 			public:

@@ -6,17 +6,17 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:58:48 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 17:54:45 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 11:13:59 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ShrubberyCreationForm.hpp"
 
-
 ShrubberyCreationForm::ShrubberyCreationForm(){
 	AForm::setGradeToExec(137);
 	AForm::setGradeToSign(145);
 	AForm::setName("ShrubberyCreationForm");
+	std::cout << "SC default constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target){
@@ -24,17 +24,20 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target){
 	AForm::setGradeToSign(145);
 	_target = target;
 	AForm::setName("ShrubberyCreationForm");
+	std::cout << "SC parametrized constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) 
 : AForm(other){
 	_target = other._target;
+	std::cout << "SC copy constructor called" << std::endl;
 }
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm &other){
 	if (this != &other)
 		_target = other._target;
 	return (*this);
+	std::cout << "SC copy assignment constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){
@@ -42,7 +45,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm(){
 
 const char *ShrubberyCreationForm::NotSignException::what() const throw()
 {
-	return ("Form is no sign");
+	return ("Form is not signed");
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor)  const{

@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 15:30:27 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 17:57:43 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 11:21:48 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ Intern& Intern::operator=(const Intern &other){
 	return (*this);
 }
 
-
 const char *Intern::makeFormException::what() const throw()
 {
-	return ("Grade is too high");
+	return ("Not a valid form!!");
+}
+Intern::~Intern(){
 }
 
 AForm* Intern::makeForm(std::string formName, std::string formTarget){
@@ -48,6 +49,7 @@ AForm* Intern::makeForm(std::string formName, std::string formTarget){
             return (form[i](formTarget));
         }
     }
+    
     std::cout << "Intern cannot create " << formName << std::endl;
     throw makeFormException();
 }

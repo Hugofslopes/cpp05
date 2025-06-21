@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 09:50:59 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/02 14:42:36 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 10:18:35 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class Bureaucrat{
 		};
 
     private:
-        std::string     _name;
+        const std::string     _name;
         unsigned int    _grade;
 };
 std::ostream& operator<<(std::ostream &out, const  Bureaucrat &Bureaucrat);

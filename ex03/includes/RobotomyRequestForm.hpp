@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:17:33 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 17:59:40 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 11:04:23 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ class RobotomyRequestForm : public AForm {
 		RobotomyRequestForm& operator=(const RobotomyRequestForm &other);
 		~RobotomyRequestForm();
 
-		void execute(Bureaucrat const & executor)  const;
-		static AForm *creatRForm(std::string const &target);
-
+		void 			execute(Bureaucrat const & executor)  const;
+		static AForm 	*creatRForm(std::string const &target);
+		
 	private:
 		std::string _target;
 		class NotSignException : public std::exception

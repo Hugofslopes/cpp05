@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:16:50 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 17:52:22 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 11:12:59 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ RobotomyRequestForm::RobotomyRequestForm(){
 	AForm::setGradeToExec(45);
 	AForm::setGradeToSign(72);
 	AForm::setName("RobotomyRequestForm");
+	std::cout << "RR default constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target){
@@ -23,17 +24,20 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target){
 	AForm::setGradeToSign(72);
 	AForm::setName("RobotomyRequestForm");
 	_target = target;
+	std::cout << "RR parametrized constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other)
 : AForm(other) {
 	_target = other._target;
+	std::cout << "RR copy constructor called" << std::endl;
 }
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &other){
 	if (this != &other)
 		_target = other._target;
 	return (*this);
+	std::cout << "RR copy assignment constructor called" << std::endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(){
@@ -41,7 +45,7 @@ RobotomyRequestForm::~RobotomyRequestForm(){
 
 const char *RobotomyRequestForm::NotSignException::what() const throw()
 {
-	return ("Form is no sign");
+	return ("Form is not signed");
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor)  const{

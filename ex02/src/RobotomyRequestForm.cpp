@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:16:50 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 15:26:10 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 10:33:17 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ RobotomyRequestForm::~RobotomyRequestForm(){
 
 const char *RobotomyRequestForm::NotSignException::what() const throw()
 {
-	return ("Form is no sign");
+	return ("Form is not signed");
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor)  const{

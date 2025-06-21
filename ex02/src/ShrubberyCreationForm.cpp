@@ -6,7 +6,7 @@
 /*   By: hfilipe- <hfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:58:48 by hfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 15:29:22 by hfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/21 10:33:21 by hfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm(){
 
 const char *ShrubberyCreationForm::NotSignException::what() const throw()
 {
-	return ("Form is no sign");
+	return ("Form is not signed");
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor)  const{
